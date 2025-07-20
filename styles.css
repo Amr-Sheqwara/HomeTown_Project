@@ -18,14 +18,18 @@ body {
 #hero {
     display: flex;
     flex-direction: column;
-    background-image: url(images/City.jpg);
-    max-width: 100%;
-    background-size:cover;
-    background-position: center;
-    padding: 130px;
     align-items: center;
     color: whitesmoke;
     text-shadow: 2px 2px 4px black;
+}
+
+.container {
+    background-image: url(images/City.jpg);
+    padding: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
 }
 
 .hero-title, .hero-subtitle {
