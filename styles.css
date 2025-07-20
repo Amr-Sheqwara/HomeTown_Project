@@ -5,13 +5,14 @@ LIGHT: #F1FAEE
 AQUA: #A8DADC
 LIGHT BLUE: #457B9D
 DARK BLUE: #1D3557
-
 */
 
 body {
     margin: 0;
     text-align: center;
     background-color: whitesmoke;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
 /* Header SECTION */
@@ -22,6 +23,8 @@ body {
     align-items: center;
     color: whitesmoke;
     text-shadow: 2px 2px 4px black;
+    padding: 1rem;
+    text-align: center;
 }
 
 .container {
@@ -31,6 +34,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-title, .hero-subtitle {
@@ -40,7 +45,7 @@ body {
     margin: 5px 0 10px 0;
 }
 
-.hero-subtitle{
+.hero-subtitle {
     background: #457B9D;
 }
 
@@ -54,8 +59,8 @@ body {
 }
 
 .guide-title {
-    font-size:140%;
-    margin-top:50px;
+    font-size: 140%;
+    margin-top: 50px;
     margin-bottom: 40px;
 }
 
@@ -64,43 +69,34 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    gap:1rem;
+    gap: 1rem;
 }
 
 .activity-1, .activity-2, .activity-3 {
     flex: 1 1 300px;
     max-width: 300px;
+    width: 100%;
     text-align: center;
 }
 
 img.img-a, img.img-b, img.img-c {
-    height: auto;
+    width: 100%;
     max-width: 250px;
-    object-fit:cover;
+    height: auto;
+    object-fit: cover;
     border-radius: 15px;
     border: 2px solid #457B9D;
 }
 
 /* Guide SECTION */
-    .guide {
-        flex-direction: column;
-        align-items: center;
-    }
-    .guide-img {
-        width: 100%;
-        max-width: 300px;
-    }
-    .guide-text {
-        width: 100%;
-        max-width: 300px;
-    }
-
 .guide {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 50px 0;
+    flex-direction: row;
 }
+
 .guide-img {
     width: 200px;
     object-fit: scale-down;
@@ -113,9 +109,9 @@ img.img-a, img.img-b, img.img-c {
     margin: 0 auto;
 }
 
-.card{
+.card {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     align-items: center;
     padding: 20px;
     background: #A8DADC;
@@ -123,20 +119,50 @@ img.img-a, img.img-b, img.img-c {
     border-radius: 10px;
 }
 
-
+/* RESPONSIVE STYLES */
 @media (max-width: 600px) {
     .activities {
         flex-direction: column;
         align-items: center;
     }
+
     .activity-1, .activity-2, .activity-3 {
+        width: 100%;
         max-width: 100%;
-        width: 90%;
     }
+
     .guide {
         flex-direction: column;
+        text-align: center;
+        padding: 1rem;
     }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .guide-img {
-    margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .guide-text {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .guide-title {
+        font-size: 1.2rem;
     }
 }
