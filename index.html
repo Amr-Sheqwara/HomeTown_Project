@@ -49,5 +49,48 @@
             </div>
         </div>
     </div>
+    <!-- GALLERY SECTION-->
+            <div class="gallery-wrapper">
+                <img id="back-btn" src="images/back.png">
+                <div class="gallery">
+                    <div>
+                    <span><img class="gallery-img" src="images/park2.jpg"></span>
+                    <span><img class="gallery-img" src="images/park3.jpg"></span>
+                    <span><img class="gallery-img" src="images/park4.jpg"></span>
+                    </div>
+                    <div>
+                    <span><img class="gallery-img" src="images/oldcity1.jpg"></span>
+                    <span><img class="gallery-img" src="images/oldcity2.jpg"></span>
+                    <span><img class="gallery-img" src="images/oldcity3.jpg"></span>
+                    </div>
+                    <div>
+                    <span><img class="gallery-img" src="images/Albazan1.jpg"></span>
+                    <span><img class="gallery-img" src="images/Albazan2.jpg"></span>
+                    <span><img class="gallery-img" src="images/Albazan3.jpg"></span>
+                    </div>
+                </div>
+                <img id="next-btn" src="images/next.png">
+            </div>
+        <script>
+
+            let Scrollcontainer = document.querySelector('.gallery');
+            let backBtn = document.getElementById('back-btn');
+            let nextBtn = document.getElementById('next-btn');
+
+            Scrollcontainer.addEventListener('wheel', (event) => {
+                event.preventDefault();
+                Scrollcontainer.scrollLeft += event.deltaY;
+                
+            });
+
+            backBtn .addEventListener('click', () => {
+                Scrollcontainer.scrollLeft -= 1150;
+            });
+
+            nextBtn.addEventListener('click', () => {
+                Scrollcontainer.scrollLeft += 1150;
+            });
+        </script>
+
 </body>
 </html>

@@ -8,11 +8,12 @@ DARK BLUE: #1D3557
 */
 
 body {
-    margin: 0;
-    text-align: center;
-    background-color: whitesmoke;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+  color: #1D3557;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 /* Header SECTION */
@@ -119,6 +120,68 @@ img.img-a, img.img-b, img.img-c {
     border-radius: 10px;
 }
 
+/* GALLERY SECTION */
+
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10% auto;
+}
+
+.gallery {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.gallery-img {
+  height: 250px;
+  max-width: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #457B9D;
+  transition: transform 0.3s ease;
+}
+
+#back-btn, #next-btn {
+    width: 50px;
+    margin: 40px;
+    cursor: pointer;
+    left: 8px;
+    right: 8px;
+}
+
+.gallery::-webkit-scrollbar {
+    display: none;
+
+}
+
+.gallery div img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.gallery div img{
+    width: 100%;
+}
+
+.gallery div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    padding: 20px;
+    flex: none;
+}
+
+
+
+
+
+
+
 /* RESPONSIVE STYLES */
 @media (max-width: 600px) {
     .activities {
@@ -166,3 +229,4 @@ img.img-a, img.img-b, img.img-c {
         font-size: 1.2rem;
     }
 }
+
