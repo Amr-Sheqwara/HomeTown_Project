@@ -267,11 +267,7 @@
         }
 
             #back-btn, #next-btn {
-        width: 15px;
-        margin: 15px;
-        cursor: pointer;
-        left: 4px;
-        right: 4px;
+            display: none;
         }
 
         #back-to-top {
