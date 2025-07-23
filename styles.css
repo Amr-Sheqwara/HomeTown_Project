@@ -89,7 +89,7 @@
 
     .img-activity {
         width: 100%;
-        max-width: 250px;
+        max-width: 350px;
         height: auto;
         object-fit: cover;
         border-radius: 15px;
@@ -218,8 +218,11 @@
         }
 
         .activity-1, .activity-2, .activity-3, .activity-4 {
-            width: 100%;
             max-width: 100%;
+        }
+        
+        .img-activity {
+            max-width: 350px;
         }
 
         .guide {
@@ -236,7 +239,6 @@
 
         .guide-img {
             margin: 0 0 1rem 0;
-            width: 100%;
             max-width: 200px;
         }
 
