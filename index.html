@@ -89,51 +89,23 @@
             <img id="next-btn" src="images/next.png">
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.querySelector('.gallery');
-            const backBtn = document.getElementById('back-btn');
-            const nextBtn = document.getElementById('next-btn');
+            let scrollcontainer= document.querySelector('.gallery');
+            let backBtn = document.getElementById('back-btn');
+            let nextBtn = document.getElementById('next-btn');
 
-            // detect mobile
-            const isMobile = window.matchMedia('(max-width: 600px)').matches;
-
-            // what “page” width means for scroll‑by:
-            const getScrollAmount = () => gallery.clientWidth;
-
-            // common wheel‑to‑scroll behavior
-            gallery.addEventListener('wheel', e => {
-                e.preventDefault();
-                gallery.scrollBy({ left: e.deltaY, behavior: 'smooth' });
+            scrollcontainer.addEventListener('wheel', (event) => {
+                event.preventDefault();
+                scrollcontainer.scrollLeft += event.deltaY, { behavior: 'smooth' };
             });
 
-            if (isMobile) {
-                // on mobile: still scroll by container width
-                backBtn.addEventListener('click', () => {
-                gallery.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
-                });
-                nextBtn.addEventListener('click', () => {
-                gallery.scrollBy({ left:  getScrollAmount(), behavior: 'smooth' });
-                });
-            } else {
-                // on desktop: maybe you want fixed‑px scroll
-                const desktopStep = 1155;
-                backBtn.addEventListener('click', () => {
-                gallery.scrollBy({ left: -desktopStep, behavior: 'smooth' });
-                });
-                nextBtn.addEventListener('click', () => {
-                gallery.scrollBy({ left:  desktopStep, behavior: 'smooth' });
-                });
-            }
+            backBtn.addEventListener('click', () => {
+                scrollcontainer.scrollLeft -=1170, { behavior: 'smooth' };
+            });
 
-            // Optional: re-check on resize (so if they rotate phone, it switches behavior)
-            window.addEventListener('resize', () => {
-                const nowMobile = window.matchMedia('(max-width: 600px)').matches;
-                if (nowMobile !== isMobile) {
-                // you could re-bind listeners here or simply reload:
-                window.location.reload();
-                }
+            nextBtn.addEventListener('click', () => {
+                scrollcontainer.scrollLeft +=1170, { behavior: 'smooth' };
             });
-            });
+
         </script>
 
             <!-- GUIDE SECTION -->
