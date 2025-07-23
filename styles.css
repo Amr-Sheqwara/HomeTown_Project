@@ -223,7 +223,7 @@
         
         .img-activity {
             width: 100%;
-            max-width: 85vw;
+            max-width: 60vw;
             height: auto;
             object-fit: cover;
             border-radius: 15px;
