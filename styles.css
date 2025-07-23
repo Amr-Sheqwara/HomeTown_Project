@@ -74,6 +74,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        margin: 0 20px;
         width: 35%;
     }
 
@@ -84,17 +86,34 @@
     }
 
     .activity-2, .activity-4 {
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     .img-activity {
         width: 100%;
         max-width: 350px;
         height: auto;
+        max-height: 250px;
         object-fit: cover;
         border-radius: 15px;
         border: 2px solid var(--light-blue);
     }
+
+    .btn {
+        background: var(--dark-blue);
+        color: whitesmoke;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+    background: var(--aqua); /* or any color */
+    transform: scale(1.1);
+    opacity: 1;
+    }
+
 
     /* Guide SECTION */
     .guide-section {
@@ -126,6 +145,8 @@
         border-bottom: 6px solid var(--dark-blue);
         border-radius: 10px;
     }
+
+
 
     /* GALLERY SECTION */
 
@@ -191,7 +212,7 @@
     bottom: 2rem;
     right: 2rem;
     padding: 0.85rem 0.85rem;
-    background: var(--light-blue);
+    background-color: var(--dark-blue);
     color: whitesmoke;
     border: none;
     border-radius: 45%;
@@ -207,6 +228,12 @@
 
     body.scrolled #back-to-top {
     display: block;
+    }
+
+    #back-to-top:hover {
+    background: var(--aqua); /* or any color */
+    transform: scale(1.1);
+    opacity: 1;
     }
 
 
