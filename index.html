@@ -89,33 +89,21 @@
             <img id="next-btn" src="images/next.png">
         </div>
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-            const gallery = document.querySelector('.gallery');
-            const backBtn = document.getElementById('back-btn');
-            const nextBtn = document.getElementById('next-btn');
+            let scrollcontainer = document.querySelector('.gallery');
+            let nextBtn = document.querySelector('#next-btn');
+            let backBtn = document.querySelector('#back-btn');
 
             scrollcontainer.addEventListener('wheel', (event) => {
                 event.preventDefault();
-                scrollcontainer.scrollLeft += event.deltaY, { behavior: 'smooth' };
-            scrollcontainer.addEventListener('wheel', (event) => {
-                event.preventDefault();
-                scrollcontainer.scrollLeft += event.deltaY, { behavior: 'smooth' };
-            });
-
-            backBtn.addEventListener('click', () => {
-                scrollcontainer.scrollLeft -=1170, { behavior: 'smooth' };
+                scrollcontainer.scrollLeft += event.deltaY;
             });
 
             nextBtn.addEventListener('click', () => {
-                scrollcontainer.scrollLeft +=1170, { behavior: 'smooth' };
+                scrollcontainer.scrollLeft += 1150;
             });
 
             backBtn.addEventListener('click', () => {
-                scrollcontainer.scrollLeft -=1170, { behavior: 'smooth' };
-            });
-
-            nextBtn.addEventListener('click', () => {
-                scrollcontainer.scrollLeft +=1170, { behavior: 'smooth' };
+                scrollcontainer.scrollLeft -= 1150;
             });
 
         </script>
